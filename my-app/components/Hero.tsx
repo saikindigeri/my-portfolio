@@ -1,9 +1,15 @@
 import React from 'react';
+import { BackgroundLines } from './ui/background-lines';
+
 
 const Hero = () => {
   return (
-    <section className="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
-      <div className="text-center">
+    <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 overflow-hidden">
+      {/* Background Lines */}
+      <BackgroundLines />
+      
+      {/* Hero Content */}
+      <div className="relative z-10 text-center">
         <h1 className="text-6xl font-extrabold text-white">
           Hi, I'm <span className="text-yellow-300">Sai Kumar</span>
         </h1>

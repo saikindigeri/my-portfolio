@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import Projects from './projects/page';
 import Contact from './contact/page';
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -18,8 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+
+      
       <body className={inter.className}>
+
         {children}
+     
         <About />
         <Projects />
         <Contact />
