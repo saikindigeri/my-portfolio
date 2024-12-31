@@ -3,6 +3,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import Projects from './projects/page';
 import Contact from './contact/page';
+import { Footer } from '@/components/Footer';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -28,6 +29,7 @@ export default function RootLayout({
         <About />
         <Projects />
         <Contact />
+      
       </body>
     </html>
   );
