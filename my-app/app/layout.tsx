@@ -1,3 +1,5 @@
+
+
 import About from './about/page';
 import './globals.css';
 import { Inter } from 'next/font/google';
@@ -5,9 +7,6 @@ import Projects from './projects/page';
 import Contact from './contact/page';
 import { Footer } from '@/components/Footer';
 
-import { FloatingNav } from '@/components/ui/floating-navbar';
-import { IconHome, IconMessage, IconUser } from '@tabler/icons-react';
-import Navbar from '@/components/Navbar';
 import { NavbarDemo } from './Navbar/page';
 
 
@@ -29,11 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-<NavbarDemo/>
+
       <body className={inter.className}>
-   
+   <NavbarDemo/>
         {children}
-    
+        
         <About />
         <Projects />
         <Contact />
