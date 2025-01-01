@@ -14,14 +14,7 @@ export function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center font-poppins">
       <Navbar className="top-0 left-0 right-0" />
-      <div className="pt-20 text-center">
-        <h1 className="text-4xl font-bold text-black dark:text-white">
-          Welcome to My Portfolio
-        </h1>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-          Explore my projects, skills, and more.
-        </p>
-      </div>
+    
     </div>
   );
 }

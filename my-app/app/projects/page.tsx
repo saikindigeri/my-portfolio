@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projects = () => {
   return (
-    <section className="py-20 bg-gray-100 text-center" id="projects">
+    <section className="py-20 bg-black bg-gray-100 text-center" id="projects">
       <h2 className="text-4xl font-bold text-gray-800">Projects</h2>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {/* Example Project Card */}
