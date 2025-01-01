@@ -1,11 +1,23 @@
 "use client";
-
-import { TextGenerateEffect } from "./ui/text-generate-effect";
-
-
-const words = ` Passionate about crafting dynamic and innovative web experiences. Constantly exploring new technologies and development approaches.
-`;
+import React from "react";
+import { TextRevealCard, TextRevealCardDescription, TextRevealCardTitle } from "./ui/text-reveal-card";
+;
 
 export function Footer() {
-  return <TextGenerateEffect duration={2} filter={false} words={words} />;
+  return (
+    <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
+      <TextRevealCard
+        text="You know the business"
+        revealText="I know the chemistry "
+      >
+        <TextRevealCardTitle>
+          Sometimes, you just need to see it.
+        </TextRevealCardTitle>
+        <TextRevealCardDescription>
+          This is a text reveal card. Hover over the card to reveal the hidden
+          text.
+        </TextRevealCardDescription>
+      </TextRevealCard>
+    </div>
+  );
 }

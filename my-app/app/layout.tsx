@@ -4,6 +4,10 @@ import { Inter } from 'next/font/google';
 import Projects from './projects/page';
 import Contact from './contact/page';
 import { Footer } from '@/components/Footer';
+
+import { FloatingNav } from '@/components/ui/floating-navbar';
+import { IconHome, IconMessage, IconUser } from '@tabler/icons-react';
+import Navbar from '@/components/Navbar';
 import { NavbarDemo } from './Navbar/page';
 
 
@@ -15,6 +19,8 @@ export const metadata = {
   description: 'Professional Portfolio for Sai Kumar - Full Stack Developer',
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -22,12 +28,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+
 <NavbarDemo/>
-      
       <body className={inter.className}>
    
         {children}
-     
+    
         <About />
         <Projects />
         <Contact />
