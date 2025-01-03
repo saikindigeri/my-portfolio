@@ -58,31 +58,34 @@ export const projects = [
 export function ProjectsSection() {
   return (
     <section
-      id="projects"
-      className="py-20 bg-gradient-to-b from-gray-900 to-black text-white text-center"
+  id="projects"
+  className="py-20 bg-gradient-to-b from-gray-900 to-black text-white text-center overflow-hidden"
+>
+  <h2 className="text-4xl font-bold mb-10 font-poppins">Projects</h2>
+
+  <div className="relative w-full overflow-x-hidden">
+    <motion.div
+      className="flex space-x-8"
+      animate={{ x: ["0%", "-100%"] }}
+      transition={{
+        ease: "linear",
+        duration: 20,
+        repeat: Infinity,
+      }}
     >
-      <h2 className="text-4xl font-bold mb-10 font-poppins">Projects</h2>
-      <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-      >
-        {projects.map((project, index) => (
-          <motion.a
-            key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-6 bg-white/10 rounded-lg shadow-lg border border-white/20 flex flex-col justify-between"
-            whileHover={{ scale: 1.05, boxShadow: "0 4px 15px rgba(255, 255, 255, 0.3)" }}
-            transition={{ duration: 0.3 }}
-          >
-            <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-            <p className="text-lg">{project.description}</p>
-          </motion.a>
-        ))}
-      </motion.div>
-    </section>
+      {projects.concat(projects).map((project, index) => (
+        <div
+          key={index}
+          className="min-w-[300px] md:min-w-[400px] p-6 bg-white/10 rounded-lg shadow-lg border border-white/20 flex flex-col justify-between"
+        >
+          <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
+          <p className="text-lg">{project.description}</p>
+        </div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
+  
   );
 }
