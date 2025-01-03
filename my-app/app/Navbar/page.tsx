@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "@fontsource/poppins"; // Import Poppins font
 
 const navItems = [
-  { name: "Home", href: "#home" },
+  
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
@@ -28,7 +28,7 @@ function Navbar({ className }: { className?: string }) {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-xl font-bold text-white dark:text-white">
-          MyPortfolio
+          Sai Kumar
         </div>
         <div className="flex space-x-8">
           {navItems.map((item) => (
@@ -41,7 +41,7 @@ function Navbar({ className }: { className?: string }) {
                 active === item.name
                   ? "text-blue-500 dark:text-blue-400"
                   : "text-white dark:text-white"
-              } hover:text-blue-500 dark:hover:text-blue-400 transition-all`}
+              } hover:text-gray-500 dark:hover:text-blue-400 transition-all`}
             >
               {item.name}
             </a>
