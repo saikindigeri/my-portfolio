@@ -3,7 +3,7 @@
 import React from "react";
 
 import { Cover } from "@/components/ui/cover";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+
 
 
 const NewPage = () => {

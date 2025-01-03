@@ -5,8 +5,9 @@ import "@fontsource/poppins"; // Import Poppins font
 const navItems = [
   
   { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+ 
   { name: "Contact", href: "#contact" },
 ];
 
@@ -24,7 +25,7 @@ function Navbar({ className }: { className?: string }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-lg bg-white/10 dark:bg-black/10 shadow-lg border-b border-white/20 font-poppins ${className}`}
+      className={ ` fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-lg bg-white/10 dark:bg-black/10 shadow-lg border-b border-white/20 font-poppins ${className}`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-xl font-bold text-white dark:text-white">

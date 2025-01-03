@@ -1,19 +1,44 @@
-import React from 'react';
+"use client";
+import React from "react";
 
-const Contact = () => {
+export function ContactForm() {
   return (
-    <section className="py-20 bg-black bg-blue-50 text-center" id="contact">
-      <h2 className="text-4xl font-bold text-gray-800">Contact Me</h2>
-      <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
-        Let's work together on your next project. Feel free to reach out to me.
-      </p>
-      <div className="mt-6">
-        <a href="mailto:example@gmail.com" className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-          Send an Email
-        </a>
-      </div>
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-b from-black to-gray-900 text-white text-center"
+    >
+      <h2 className="text-4xl font-bold mb-10 font-poppins">Contact Me</h2>
+      <form className="max-w-3xl mx-auto space-y-6">
+        <div>
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full p-4 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-black/20"
+          />
+        </div>
+        <div>
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full p-4 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-black/20"
+          />
+        </div>
+        <div>
+          <textarea
+            rows="5"
+            placeholder="Your Message"
+            className="w-full p-4 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-black/20"
+          ></textarea>
+        </div>
+        <div>
+          <button
+            type="submit"
+            className="w-full p-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold text-white"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
     </section>
   );
-};
-
-export default Contact;
+}
