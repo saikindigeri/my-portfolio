@@ -8,7 +8,7 @@ import { Inter } from 'next/font/google';
 
 import { NavbarDemo } from './Navbar/page';
 import { Skills } from './skills/page';
-import { ProjectsSection } from './projects/page';
+import Projects from './projects/page';
 import { ContactForm } from './contact/page';
 import Footer from './footer/page';
 
@@ -39,7 +39,7 @@ export default function RootLayout({
         
         <About />
         <Skills/>
-        <ProjectsSection/>
+        <Projects/>
         <ContactForm/>
         <Footer/>
       </body>
