@@ -116,26 +116,26 @@ export default function ProjectsSection() {
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={handleMouseLeave}
       >
-        <motion.div className="flex space-x-12 w-max" animate={controls}>
-          {[...projects, ...projects].map((project, index) => (
-            <motion.div
-              key={index}
-              whileHover={{
-                scale: 1.08,
-                background:
-                  "linear-gradient(135deg, #991b1b, #dc2626, #ef4444)",
-                boxShadow: "0 10px 25px rgba(239, 68, 68, 0.5)",
-                transition: { duration: 0.5 },
-              }}
-              className="flex-none w-[380px] md:w-[450px] p-8 bg-white/10 rounded-2xl shadow-xl border border-white/20 hover:shadow-3xl"
-            >
-              <h3 className="text-3xl font-semibold mb-5">{project.title}</h3>
-              <p className="text-lg opacity-80 leading-relaxed">
-                {project.description}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
+     <motion.div className="flex space-x-12 w-max" animate={controls}>
+  {[...projects, ...projects].map((project, index) => (
+    <motion.div
+      key={index}
+      whileHover={{
+        scale: 1.08,
+        background:
+          "linear-gradient(135deg, #D6AEDD, #A5F3FC, #FFDDD2)", // Soft lavender, mint green, and light peach gradient
+        boxShadow: "0 8px 25px rgba(228, 134, 204, 0.7)", // Subtle lavender shadow
+        transition: { duration: 0.5 },
+      }}
+      className="flex-none w-[380px] md:w-[450px] p-8 bg-white/10 rounded-2xl shadow-xl border border-white/20 hover:shadow-3xl"
+    >
+      <h3 className="text-3xl font-semibold mb-5">{project.title}</h3>
+      <p className="text-lg opacity-80 leading-relaxed">{project.description}</p>
+    </motion.div>
+  ))}
+</motion.div>
+
+
       </div>
     </section>
   );

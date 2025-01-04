@@ -26,7 +26,7 @@ export function Skills() {
     {skills.map((skill) => (
       <div
         key={skill.name}
-        className="relative p-8 rounded-lg shadow-xl bg-white/10 backdrop-blur-lg border border-white/10 hover:bg-gradient-to-br from-green-500 to-rose-600 hover:scale-110 transition-all duration-300 group"
+        className="relative p-8 rounded-lg shadow-xl bg-white/10 backdrop-blur-lg border border-white/10 hover:bg-gradient-to-br from-blue-950 to-rose-900 hover:scale-110 transition-all duration-300 group"
       >
         <div className="absolute inset-0 z-0 rounded-lg bg-gradient-to-b from-transparent via-white/10 to-transparent group-hover:via-white/20"></div>
 

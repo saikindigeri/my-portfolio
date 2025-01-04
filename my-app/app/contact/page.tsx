@@ -33,9 +33,9 @@ export function ContactForm() {
         <div>
           <button
             type="submit"
-            className="w-full p-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold text-white"
+            className="w-32 p-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold text-white"
           >
-            Send Message
+            Submit
           </button>
         </div>
       </form>

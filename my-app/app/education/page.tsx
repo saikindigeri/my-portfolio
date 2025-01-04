@@ -31,48 +31,50 @@ export default function EducationTimeline() {
       <h2 className="text-3xl font-extrabold mb-14 tracking-wide font-poppins">
         Education 
       </h2>
-
       <div className="max-w-4xl mx-auto relative">
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-white/20 h-full"></div>
+  <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 to-red-700 h-full"></div>
 
-        {timelineData.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: index * 0.3,
-            }}
-            viewport={{ once: true }}
-            className={`relative ${
-              index % 2 === 0 ? "text-left pl-10" : "text-right pr-10"
-            } mb-14`}
-          >
-            <div
-              className={`absolute top-1 left-1/2 w-5 h-5 bg-red-500 border-4 border-white rounded-full -translate-x-1/2`}
-            ></div>
+  {timelineData.map((item, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.8,
+        delay: index * 0.3,
+      }}
+      viewport={{ once: true }}
+      className={`relative ${
+        index % 2 === 0 ? "text-left pl-10" : "text-right pr-10"
+      } mb-14`}
+    >
+      <div
+        className={`absolute top-1 left-1/2 w-6 h-6 bg-gradient-to-br from-blue-400 to-red-500 border-4 border-gray-900 rounded-full -translate-x-1/2`}
+      ></div>
 
-            {/* Timeline Card */}
-            <motion.div
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 8px 30px rgba(255, 99, 99, 0.6)",
-              }}
-              transition={{ duration: 0.3 }}
-              className={`inline-block w-[45%] p-6 bg-white/10 rounded-lg shadow-lg border border-white/20 ${
-                index % 2 === 0 ? "ml-auto" : ""
-              }`}
-            >
-              <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm opacity-80">{item.description}</p>
-              <span className="text-sm font-light block mt-3 text-red-400">
-                {item.year}
-              </span>
-            </motion.div>
-          </motion.div>
-        ))}
-      </div>
+      {/* Timeline Card */}
+      <motion.div
+        whileHover={{
+          scale: 1.05,
+          boxShadow: "0 8px 20px rgba(159, 43, 104,3)", // Reduced blueish red shadow
+          backgroundColor: "rgb(159, 43, 104,0.3)", // Balanced blueish red background
+        }}
+        transition={{ duration: 0.3 }}
+        className={`inline-block w-[45%] p-6 bg-white/10 rounded-lg shadow-xl border border-gray-400  ${
+          index % 2 === 0 ? "ml-auto" : ""
+        }`}
+      >
+        <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+        <p className="text-sm opacity-80 leading-relaxed">{item.description}</p>
+        <span className="text-sm font-light block mt-3 bg-gradient-to-r from-blue-400 to-red-500 text-transparent bg-clip-text">
+          {item.year}
+        </span>
+      </motion.div>
+    </motion.div>
+  ))}
+</div>
+
+
     </section>
   );
 }

@@ -1,46 +1,51 @@
-import React from "react";
+import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="py-20 bg-gradient-to-b from-gray-900  to-black text-white text-center">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center">
-        {/* Footer Header */}
-        <h2 className="text-4xl font-bold mb-10 font-poppins">Stay Connected</h2>
-
-        {/* Social Media Section */}
-        <div className="space-y-6 mb-12">
-          <div className="flex justify-center space-x-8">
-            <a
-              href="https://www.linkedin.com/in/saikumar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white text-3xl hover:text-blue-500 transform transition-all duration-300 ease-in-out hover:scale-125"
-            >
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/saikumar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white text-3xl hover:text-gray-400 transform transition-all duration-300 ease-in-out hover:scale-125"
-            >
-              <i className="fab fa-github"></i>
-            </a>
-            <a
-              href="mailto:saikumar@gmail.com"
-              className="text-white text-3xl hover:text-red-500 transform transition-all duration-300 ease-in-out hover:scale-125"
-            >
-              <i className="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-
+    <footer className=" bg-gradient-to-b  from-gray-900 to-black text-white py-8">
+      <div className="max-w-7xl mx-auto flex flex-col p-20 justify-between items-center">
       
-    
-        {/* Copyright Section */}
-        <div className="text-sm text-gray-400 mt-12">
-          <p>&copy; 2025 Sai Kumar Kindigeri. All rights reserved.</p>
+        <div className="flex space-x-6">
+          {/* GitHub */}
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-gray-700 hover:scale-110 transition-all"
+          >
+            <FaGithub className="w-6 h-6 text-white" />
+          </a>
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-gray-700 hover:scale-110 transition-all"
+          >
+            <FaLinkedin className="w-6 h-6 text-white" />
+          </a>
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-gray-700 hover:scale-110 transition-all"
+          >
+            <FaInstagram className="w-6 h-6 text-white" />
+          </a>
+          {/* Twitter */}
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-gradient-to-r  from-blue-600 to-gray-700 hover:scale-110 transition-all"
+          >
+            <FaTwitter className="w-6 h-6 text-white" />
+          </a>
         </div>
+        <p className="text-sm opacity-80 mt-4">
+          &copy; {new Date().getFullYear()} Sai Kumar Kindigeri. All rights reserved.
+        </p>
       </div>
     </footer>
   );
