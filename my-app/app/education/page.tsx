@@ -56,8 +56,7 @@ export default function EducationTimeline() {
       <motion.div
         whileHover={{
           scale: 1.05,
-          boxShadow: "0 8px 20px rgba(159, 43, 104,3)", // Reduced blueish red shadow
-          backgroundColor: "rgb(159, 43, 104,0.3)", // Balanced blueish red background
+         // Balanced blueish red background
         }}
         transition={{ duration: 0.3 }}
         className={`inline-block w-[45%] p-6 bg-white/10 rounded-lg shadow-xl border border-gray-400  ${

@@ -29,9 +29,9 @@ function Navbar({ className }: { className?: string }) {
       className={ ` fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-lg bg-white/10 dark:bg-black/10 shadow-lg border-b border-white/20 font-poppins ${className}`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold text-white dark:text-white">
+        <a href="#about" className="text-xl font-bold text-white dark:text-white">
           Sai Kumar
-        </div>
+        </a>
         <div className="flex space-x-8">
           {navItems.map((item) => (
             <a

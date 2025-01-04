@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/moving-border";
 import React from "react";
 
 export function ContactForm() {
@@ -31,13 +32,13 @@ export function ContactForm() {
           ></textarea>
         </div>
         <div>
-          <button
-            type="submit"
-            className="w-32 p-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold text-white"
-          >
-            Submit
-          </button>
-        </div>
+      <Button
+        borderRadius="1.75rem"
+        className="bg-gray-900 text-white dark:bg-slate-900  border-neutral-700 dark:border-slate-800"
+      >
+Submit
+      </Button>
+    </div>
       </form>
     </section>
   );
