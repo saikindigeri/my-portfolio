@@ -58,25 +58,46 @@ export default function ProjectsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
 
-  // Auto-scroll effect
   useEffect(() => {
     if (!isHovering) {
       controls.start({
-        x: ["0%", "-50%"], // Scroll halfway (to show loop)
-        transition: { duration: 15, ease: "linear", repeat: Infinity },
+        x: ["0%", "-50%"],
+        transition: {
+          duration: 30,
+          ease: "linear",
+          repeat: Infinity,
+        },
       });
     }
   }, [isHovering]);
 
-  // Handle mouse movement
   const handleMouseMove = (e: React.MouseEvent) => {
     if (containerRef.current) {
       const { width, left } = containerRef.current.getBoundingClientRect();
       const xPos = e.clientX - left;
       const scrollPercentage = (xPos / width) * 100;
+
       controls.stop();
-      controls.start({ x: `-${scrollPercentage}%`, transition: { duration: 0.5 } });
+      controls.start({
+        x: `-${scrollPercentage}%`,
+        transition: {
+          duration: 1.5,
+          ease: "easeOut",
+        },
+      });
     }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    controls.start({
+      x: ["0%", "-50%"],
+      transition: {
+        duration: 30,
+        ease: "linear",
+        repeat: Infinity,
+      },
+    });
   };
 
   return (
@@ -84,27 +105,35 @@ export default function ProjectsSection() {
       id="projects"
       className="py-20 bg-gradient-to-b from-gray-900 to-black text-white text-center overflow-hidden"
     >
-      <h2 className="text-4xl font-bold mb-10 font-poppins">Projects</h2>
+       <h2 className="text-5xl font-extrabold mb-14 tracking-wide font-poppins">
+        Featured Projects
+      </h2>
 
       <div
         ref={containerRef}
         className="relative w-full overflow-hidden cursor-pointer"
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        onMouseLeave={handleMouseLeave}
       >
-        <motion.div
-          className="flex space-x-8 w-max"
-          animate={controls}
-        >
+        <motion.div className="flex space-x-12 w-max" animate={controls}>
           {[...projects, ...projects].map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="min-w-[300px] md:min-w-[400px] p-6 bg-white/10 rounded-lg shadow-lg border border-white/20 flex flex-col justify-between"
+              whileHover={{
+                scale: 1.08,
+                background:
+                  "linear-gradient(135deg, #991b1b, #dc2626, #ef4444)",
+                boxShadow: "0 10px 25px rgba(239, 68, 68, 0.5)",
+                transition: { duration: 0.5 },
+              }}
+              className="flex-none w-[380px] md:w-[450px] p-8 bg-white/10 rounded-2xl shadow-xl border border-white/20 hover:shadow-3xl"
             >
-              <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-lg">{project.description}</p>
-            </div>
+              <h3 className="text-3xl font-semibold mb-5">{project.title}</h3>
+              <p className="text-lg opacity-80 leading-relaxed">
+                {project.description}
+              </p>
+            </motion.div>
           ))}
         </motion.div>
       </div>

@@ -11,6 +11,7 @@ import { Skills } from './skills/page';
 import Projects from './projects/page';
 import { ContactForm } from './contact/page';
 import Footer from './footer/page';
+import EducationTimeline from './education/page';
 
 
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         
         <About />
         <Skills/>
+        <EducationTimeline/>
         <Projects/>
         <ContactForm/>
         <Footer/>
