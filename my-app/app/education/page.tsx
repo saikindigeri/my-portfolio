@@ -27,9 +27,9 @@ const timelineData = [
 
 export default function EducationTimeline() {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white text-center">
-      <h2 className="text-5xl font-extrabold mb-14 tracking-wide font-poppins">
-        Education Timeline
+    <section id="education" className="py-24 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white text-center">
+      <h2 className="text-3xl font-extrabold mb-14 tracking-wide font-poppins">
+        Education 
       </h2>
 
       <div className="max-w-4xl mx-auto relative">
@@ -52,17 +52,24 @@ export default function EducationTimeline() {
             <div
               className={`absolute top-1 left-1/2 w-5 h-5 bg-red-500 border-4 border-white rounded-full -translate-x-1/2`}
             ></div>
-            <div
+
+            {/* Timeline Card */}
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 8px 30px rgba(255, 99, 99, 0.6)",
+              }}
+              transition={{ duration: 0.3 }}
               className={`inline-block w-[45%] p-6 bg-white/10 rounded-lg shadow-lg border border-white/20 ${
                 index % 2 === 0 ? "ml-auto" : ""
               }`}
             >
               <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-lg opacity-80">{item.description}</p>
+              <p className="text-sm opacity-80">{item.description}</p>
               <span className="text-sm font-light block mt-3 text-red-400">
                 {item.year}
               </span>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>

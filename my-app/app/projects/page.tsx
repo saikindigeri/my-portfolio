@@ -103,7 +103,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-gray-900 to-black text-white text-center overflow-hidden"
+      className="py-20 bg-gradient-to-b from-[#1e293b] to-black text-white text-center overflow-hidden"
     >
        <h2 className="text-5xl font-extrabold mb-14 tracking-wide font-poppins">
         Featured Projects
