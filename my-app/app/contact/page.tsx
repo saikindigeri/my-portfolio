@@ -20,11 +20,13 @@ const ContactForm = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept":"application/json",
         },
         body: JSON.stringify({ name, email, message }),
       });
 
       const result = await response.json();
+      console.log(result)
 
       if (response.status === 200) {
         setStatus("Message sent successfully!");
