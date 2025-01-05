@@ -1,28 +1,32 @@
 'use client'
 import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
 
 export const projects = [
   {
-    title: "Stripe",
+    title: "Chat App",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-    src:"/public/projects_images/chat.png",
+      "A responsive messaging platform built with ReactJS, Node.js, Express, Socket.io, and MySQL for instant communication.",
+    demoLink: "https://wsocket.vercel.app",
+    githubLink:'https://github.com/saikindigeri/chat_app.git',
+    src:"/projects_images/chat.png",
   },
   {
-    title: "Netflix",
+    title: "Ecommerce",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
-    src:"/public/projects_images/ecommerce.png",
+      " A secure and scalable e-commerce application built with ReactJS, Node.js, Express,Mongo DB, featuring user authentication and role-based authorization.",
+      demoLink: "https://sainxtcart.ccbp.tech/",
+      githubLink:'https://github.com/saikindigeri/NxtTrendz_Ecommerce.git',
+    src:"/projects_images/ecommerce.png",
   },
   {
-    title: "Google",
+    title: "You Tube",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
-    src:"/public/projects_images/yt.png",
+      "A responsive YouTube-inspired web application built with ReactJS, Node.js, Express, and MongoDB, featuring video upload, user authentication, and content management.",
+      demoLink: "https://saikwatch.ccbp.tech/",
+      githubLink:'https://github.com/saikindigeri/nxtwatch.git',
+    src:"/projects_images/utube.png",
   },
   
 ];
@@ -92,21 +96,48 @@ export default function ProjectsSection() {
       >
      <motion.div className="flex space-x-12 w-max" animate={controls}>
   {[...projects, ...projects].map((project, index) => (
-    <motion.div
-      key={index}
-      whileHover={{
-        scale: 1.08,
-        background:
-          "linear-gradient(135deg, #D6AEDD, #A5F3FC, #FFDDD2)", // Soft lavender, mint green, and light peach gradient
-        boxShadow: "0 8px 25px rgba(228, 134, 204, 0.7)", // Subtle lavender shadow
-        transition: { duration: 0.5 },
-      }}
-      className="flex-none w-[380px] md:w-[450px] p-8 bg-white/10 rounded-2xl shadow-xl border border-white/20 hover:shadow-3xl"
-    >
-      <h3 className="text-3xl font-semibold mb-5">{project.title}</h3>
-      <p className="text-lg opacity-80 leading-relaxed">{project.description}</p>
-      
-    </motion.div>
+   <motion.div
+   key={index}
+   whileHover={{
+     scale: 1.05,
+     
+     background:
+       "linear-gradient(135deg, #A5F3FC, #93C5FD, #FDE68A)",  // Mint blue, soft blue, and pastel yellow
+     boxShadow: "0 6px 20px rgba(147, 197, 253, 0.6)",  // Soft blue shadow
+     transition: { duration: 0.4 },
+   }}
+   className="flex-none w-[320px] md:w-[380px] p-6 bg-white/10 rounded-xl shadow-lg border border-white/20 hover:shadow-2xl"
+ >
+   <img 
+     src={project.src} 
+     alt={project.title} 
+     className="w-full h-56 object-cover rounded-lg"
+   />
+   <h3 className="text-2xl font-semibold mt-4 mb-3 text-center">{project.title}</h3>
+   <p className="text-md opacity-80 leading-relaxed text-center">
+     {project.description}
+   </p>
+   
+   <div className="flex justify-between items-center px-6 py-3 mt-4">
+     <a 
+       href={project.githubLink} 
+       target="_blank" 
+       rel="noopener noreferrer"
+       className="text-md font-medium text-blue-500 hover:underline"
+     >
+       Github
+     </a>
+     <a 
+       href={project.demoLink} 
+       target="_blank" 
+       rel="noopener noreferrer"
+       className="text-md font-medium text-green-500 hover:underline"
+     >
+       Demo
+     </a>
+   </div>
+ </motion.div>
+ 
   ))}
 </motion.div>
 
