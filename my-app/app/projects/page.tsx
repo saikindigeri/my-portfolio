@@ -83,7 +83,7 @@ export default function ProjectsSection() {
       id="projects"
       className="py-20 bg-gradient-to-b from-[#1e293b] to-black text-white text-center overflow-hidden"
     >
-       <h2 className="text-5xl font-extrabold mb-14 tracking-wide font-poppins">
+       <h2 className="text-2xl font-extrabold mb-14 tracking-wide font-poppins">
         Featured Projects
       </h2>
 

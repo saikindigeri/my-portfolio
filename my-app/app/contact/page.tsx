@@ -42,7 +42,7 @@ const ContactForm = () => {
 
   return (
 
-    <section    className="py-20 bg-gradient-to-b from-black to-gray-900 text-white text-center">
+    <section id="contact"   className="py-20 bg-gradient-to-b from-black to-gray-900 text-white text-center">
 
 
       <h2 className="text-3xl text-white font-semibold text-center mb-6">Contact Me</h2>
