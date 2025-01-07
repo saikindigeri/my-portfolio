@@ -8,7 +8,7 @@ import { Inter } from 'next/font/google';
 
 import { NavbarDemo } from './Navbar/page';
 import { Skills } from './skills/page';
-import Projects, { ProjectsSection } from './projects/page';
+import Projects from './projects/page';
 
 import Footer from './footer/page';
 import EducationTimeline from './education/page';
