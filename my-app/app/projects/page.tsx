@@ -102,7 +102,7 @@ export default function ProjectsSection() {
      scale: 1.05,
      
      background:
-       "linear-gradient(135deg, #A5F3FC, #93C5FD, #FDE68A)",  // Mint blue, soft blue, and pastel yellow
+       "linear-gradient(135deg, #60A5FA, #3B82F6, #FBBF24)",  // Mint blue, soft blue, and pastel yellow
      boxShadow: "0 6px 20px rgba(147, 197, 253, 0.6)",  // Soft blue shadow
      transition: { duration: 0.4 },
    }}
@@ -123,7 +123,7 @@ export default function ProjectsSection() {
        href={project.githubLink} 
        target="_blank" 
        rel="noopener noreferrer"
-       className="text-md font-medium text-blue-500 hover:underline"
+       className="text-md font-medium text-red-500 hover:underline"
      >
        Github
      </a>

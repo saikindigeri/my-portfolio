@@ -17,11 +17,11 @@ const NewPage = () => {
           </h1>
 <div className="flex justify-center">
   
-<Button
+<Button  
              borderRadius="1.75rem"
              className=" text-center font-semibold bg-gray-900 text-white dark:bg-slate-900  border-neutral-700 dark:border-slate-800"
            >
-   View Resume
+<a download="sai.resume" href="/devasai.pdf">Resume</a>
            </Button>
 </div>
         </div>
