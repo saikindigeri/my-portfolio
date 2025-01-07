@@ -10,24 +10,22 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus("");
-
+  
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept":"application/json",
         },
         body: JSON.stringify({ name, email, message }),
       });
-
+  
       const result = await response.json();
-      console.log(result)
-
+  
       if (response.status === 200) {
         setStatus("Message sent successfully!");
       } else {
@@ -39,6 +37,7 @@ const ContactForm = () => {
       setIsSubmitting(false);
     }
   };
+  
 
   return (
 
