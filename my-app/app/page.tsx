@@ -12,7 +12,7 @@ const NewPage = () => {
 
     <section id="about">
   <div className="bg-black pt-20  " >
-          <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-violet-900 via-gray-500 to-yellow-200 dark:from-neutral-800 dark:via-white dark:to-white">
+          <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-white via-red-700 to-white dark:from-neutral-800 dark:via-white dark:to-white">
             Hey, I am <br /> Sai Kumar <Cover>Full Stack Dev</Cover>
           </h1>
 <div className="flex justify-center">
