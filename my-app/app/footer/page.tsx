@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex space-x-6">
           {/* GitHub */}
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/saikindigeri"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-gray-700 hover:scale-110 transition-all"
@@ -17,7 +17,7 @@ const Footer = () => {
           </a>
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/saikumarkindigeri/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-gray-700 hover:scale-110 transition-all"
@@ -26,7 +26,7 @@ const Footer = () => {
           </a>
           {/* Instagram */}
           <a
-            href="https://www.instagram.com/yourusername"
+            href="https://www.instagram.com/sai_.kindigeri/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-gray-700 hover:scale-110 transition-all"
@@ -35,7 +35,7 @@ const Footer = () => {
           </a>
           {/* Twitter */}
           <a
-            href="https://twitter.com/yourusername"
+            href="https://x.com/Devaa_Sai"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-gradient-to-r  from-blue-600 to-gray-700 hover:scale-110 transition-all"
