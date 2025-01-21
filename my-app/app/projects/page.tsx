@@ -101,9 +101,8 @@ export default function ProjectsSection() {
    whileHover={{
      scale: 1.05,
      
-     background:
-       "linear-gradient(135deg, #60A5FA, #3B82F6, #FBBF24)",  // Mint blue, soft blue, and pastel yellow
-     boxShadow: "0 6px 20px rgba(147, 197, 253, 0.6)",  // Soft blue shadow
+    // Mint blue, soft blue, and pastel yellow
+   
      transition: { duration: 0.4 },
    }}
    className="flex-none w-[320px] md:w-[380px] p-6 bg-white/10 rounded-xl shadow-lg border border-white/20 hover:shadow-2xl"
