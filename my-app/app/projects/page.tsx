@@ -2,6 +2,9 @@
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
+import { FiGithub } from "react-icons/fi";
 
 export const projects = [
   {
@@ -122,17 +125,20 @@ export default function ProjectsSection() {
        href={project.githubLink} 
        target="_blank" 
        rel="noopener noreferrer"
-       className="text-md font-medium text-red-500 hover:underline"
+       className="text-md font-medium text-white-700 hover:underline"
      >
-       Github
+
+
+<FiGithub />
+
      </a>
      <a 
        href={project.demoLink} 
        target="_blank" 
        rel="noopener noreferrer"
-       className="text-md font-medium text-green-500 hover:underline"
+       className="text-md font-medium text-white hover:underline"
      >
-       Demo
+       <FaExternalLinkAlt />
      </a>
    </div>
  </motion.div>
