@@ -25,18 +25,21 @@ export function Skills() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
     {skills.map((skill) => (
       <div
-        key={skill.name}
-        className="relative p-8 rounded-lg shadow-xl bg-white/10 backdrop-blur-lg border border-white/10 hover:bg-gradient-to-br from-black to-purple-900 hover:scale-110 transition-all duration-300 group"
-      >
-        <div className="absolute inset-0 z-0 rounded-lg bg-gradient-to-b from-transparent via-white/30 to-transparent group-hover:via-white/20"></div>
+  key={skill.name}
+  className="relative p-6 rounded-xl bg-gradient-to-r from-green-50 via-yellow-50 to-pink-50 border-0 hover:border-2 hover:border-blue-500 hover:bg-gradient-to-br from-indigo-200 via-indigo-300 to-indigo-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 group"
+  aria-label={skill.name}
+>
+  {/* Subtle gradient background initially with hover color transition */}
+  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-transparent to-transparent group-hover:from-indigo-300 group-hover:via-indigo-400 group-hover:to-indigo-500 opacity-80 transition-all duration-300 ease-in-out"></div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center">
-          {skill.icon}
-          <h3 className="text-3xl font-semibold font-poppins mt-5">
-            {skill.name}
-          </h3>
-        </div>
-      </div>
+  {/* Content Section */}
+  <div className="relative z-10 flex flex-col items-center justify-center text-gray-800 group-hover:text-white transition-colors duration-300 ease-in-out">
+    <div className="text-5xl">{skill.icon}</div>
+    <h3 className="mt-4 text-2xl font-semibold">{skill.name}</h3>
+  </div>
+</div>
+
+  
     ))}
   </div>
     </section>
