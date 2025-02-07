@@ -13,6 +13,7 @@ import Projects from './projects/page';
 import Footer from './footer/page';
 import EducationTimeline from './education/page';
 import ContactForm from './contact/page';
+import { ThemeProvider } from '@/components/ui/theme-provider';
 
 
 
@@ -36,7 +37,12 @@ export default function RootLayout({
 
 
       <body className={inter.className}>
-   <NavbarDemo/>
+
+      <ThemeProvider attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
+      <NavbarDemo/>
         {children}
         
         <About />
@@ -45,6 +51,8 @@ export default function RootLayout({
         <Projects/>
         <ContactForm />
         <Footer/>
+  </ThemeProvider>
+  
       </body>
     </html>
   );
