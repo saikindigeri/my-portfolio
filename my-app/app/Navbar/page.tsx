@@ -38,7 +38,7 @@ function Navbar({ className }: { className?: string }) {
   useEffect(() => {
     setMounted(true);
     if (!theme) {
-      setTheme("dark"); // Set default theme to dark
+      setTheme("light"); // Set default theme to dark
     }
   }, [theme, setTheme]);
 
@@ -48,8 +48,8 @@ function Navbar({ className }: { className?: string }) {
     <div
       className={`fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-lg transition-all duration-300 ${
         resolvedTheme === "dark"
-          ? "bg-black/80 text-white"
-          : "bg-white/80 text-black"
+          ? "bg-black text-white"
+          : "bg-white text-black"
       } shadow-lg border-b border-white/20 font-poppins ${className}`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
