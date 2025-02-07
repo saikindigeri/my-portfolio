@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
-import Link from "next/link";
+
 import { useRef, useEffect, useState } from "react";
 import { useTheme } from "next-themes"; // Import theme toggle hook
 import { FaExternalLinkAlt } from "react-icons/fa";

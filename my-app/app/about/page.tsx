@@ -11,7 +11,7 @@ const About = () => {
       ${theme === "dark" ? "bg-black text-gray-200" : "bg-white text-gray-900"}`}>
 
       <p className="mt-2 text-lg max-w-3xl mx-auto">
-        I'm a passionate full-stack developer with expertise in building responsive and scalable web applications using modern technologies like React, Next.js, Node.js, and Blockchain.
+         I'm a passionate full-stack developer with expertise in building responsive and scalable web applications using modern technologies like React, Next.js, Node.js, and Blockchain.
       </p>
     </section>
   );

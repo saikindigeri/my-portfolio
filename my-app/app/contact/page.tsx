@@ -35,7 +35,8 @@ const ContactForm = () => {
       } else {
         setStatus(result.error || "Something went wrong!");
       }
-    } catch (error) {
+    } catch (err) {
+      console.log(err)
       setStatus("Failed to send message!");
     } finally {
       setIsSubmitting(false);
